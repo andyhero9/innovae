@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<ul>
+    <!--<li>-->
+        <!--<p>$loan_limited$</p>-->
+        <!--<p>$load_no$</p>-->
+        <!--<p>$payed$</p>-->
+        <!--<p>$amount$</p>-->
+        <!--<p>$loan_time$</p>-->
+    <!--</li>-->
+    <div class="log">
+        <div class="head-img-area">
+            <a href="#publish=text" bakhref="/blog/lpvoidmain/new/text/"><img class="head-img" src="$imgsrc$"></a>
+        </div>
+        <div class="blog" >
+            <div class="blog-head-bar">
+                <div class="triangle"></div>
+                <div class="rectangle"></div>
+            </div>
+            <div class="real-blog-content">
+                <div class="blog-panel">
+                    <div class="blog-content">
+                        <div class="w-who">
+                            <a href="#" style="color: #A8A8A8; padding-bottom: 20px;">$name$</a>
+                        </div>
+
+                        <div class="cover">
+                            <img class="img-cover" src="$coversrc$" style="width: 100%">
+                        </div>
+                        <div class="words">
+                            <blockquote>
+                                <p>$text$</p>
+                            </blockquote>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+
+                    <div style="height: 30px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ul>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+<script  type="text/javascript" charset="utf-8" >
+    var data='[{"imgsrc": "assets/img/myavatar.jpg", "name": "Polotin", "coversrc": "assets/img/cover1.jpg","text": "this is text"},{"imgsrc": "assets/img/myavatar.jpg", "name": "Polotin", "coversrc": "assets/img/cover1.jpg","text": "this is text"}]';
+    var dataJson=JSON.parse(data);
+    //console.log(dataJson);
+    String.prototype.temp = function(obj) {
+        return this.replace(/\$\w+\$/gi, function(matchs) {
+            var returns = obj[matchs.replace(/\$/g, "")];
+            return (returns + "") == "undefined"? "": returns;
+        });
+    };
+    var htmlList = ''
+        , htmlTemp = $("ul").html();
+    dataJson.forEach(function(item) {
+        htmlList += htmlTemp.temp(item);
+    });
+    $("ul").html(htmlList);
+</script>
+</html>

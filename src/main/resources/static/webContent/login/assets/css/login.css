@@ -1,0 +1,150 @@
+body {
+    background: #9AFF9A;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+.logo_area{
+    width: 300px;
+    height: 110px;
+    margin: 110px auto 0 auto;
+    color: white;
+}
+
+.logo{
+    width: 300px;
+}
+
+/*.f1{*/
+    /*font-family: "STFangsong";*/
+    /*font-size: 50px;*/
+    /*font-weight: normal;*/
+/*}*/
+
+/*.f2{*/
+    /*margin-top: 20px;*/
+    /*font-family: "HYSW";*/
+    /*font-size: 20px;*/
+    /*font-weight: normal;*/
+/*}*/
+
+.menu{
+    width: 500px;
+    height: 60px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+.menu div{
+    float: left;
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu div a{
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.register_area{
+    background: #3B3B3B;
+    filter:alpha(opacity=30);
+    -moz-opacity:0.3;
+    -khtml-opacity: 0.3;
+    opacity: 0.3;
+}
+
+.register_area a{
+    color: #B3B3B3;
+}
+
+.login_area{
+    background: white;
+    /*filter:alpha(opacity=0);*/
+    /*-moz-opacity:0.5;*/
+    /*-khtml-opacity: 0.5;*/
+    /*opacity: 0.5;*/
+}
+
+.login_area a{
+    color: #595959;
+}
+
+.m-region{
+    width: 500px;
+    height: 270px;
+    margin: 0px auto 0 auto;
+    position: relative;
+    background: white;
+    /*box-shadow:0 0 1px #000; 阴影*/
+}
+
+.page-container {
+
+}
+
+form{
+    position: relative;
+    width: 305px;
+    margin: 0 auto 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.form1{
+    position: relative;
+    width: 305px;
+    margin: 0 auto 0 auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+input{
+    width: 270px;
+    height: 35px;
+    border:0;
+    margin-top: 5px;
+    border-bottom:1px solid black;
+}
+
+.error{
+    color: #FF4040;
+    height: 15px;
+    width: 270px;
+    text-align: left;
+    margin: 0 auto 0 auto;
+    font-size: 15px;
+}
+
+.btn_login{
+    width: 275px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 17px;
+    background: #82BB25;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn_login:hover{
+    background: #AFDD27;
+}
+
+.connect{
+    width: 305px;
+    margin: 10px auto 0 auto;
+    color: #B3B3B3;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.connect a{
+    color: #B3B3B3;
+    font-size: 10px;
+    text-decoration: none;
+}

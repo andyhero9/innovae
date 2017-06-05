@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行者</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="webContent/login/assets/css/login.css">
+    <link rel="stylesheet" href="webContent/login/assets/css/supersized.css">
+
+    <!-- Script -->
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="js/supersized.3.2.7.min.js"></script>
+    <script src="webContent/login/assets/js/login.js"></script>
+    <script>
+
+    </script>
+
+</head>
+<body onload="Onload()">
+    <div class="logo_area">
+        <div>
+            <!--<h1 class="f1">行 者</h1>-->
+            <!--<h2 class="f2">步履不停·生活不止</h2>-->
+            <img class="logo" src="webContent/login/assets/img/xingzhe_logo.png">
+        </div>
+        <div class="slogan"></div>
+    </div>
+
+    <div class="menu">
+        <div class="register_area" id='register_area' onclick="choose_reg()">
+            <a href="#">
+                注册
+            </a>
+        </div>
+        <div class="login_area" id='login_area' onclick="choose_log()">
+            <a href="#" >
+                登录
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="m-region">
+        <div class="page-container" id="page-container" name="login_form">
+            <form action="#" onsubmit="login1()">
+                <input type="text" id="login_email" name="login_email" class="email" placeholder="邮箱">
+                <p class="error" id="login_err"></p>
+                <input type="password" id="login_pwd" name="login_pwd" class="password" placeholder="密码">
+                <p class="error" id="login_err1"></p>
+                <button type="submit" class="btn_login" >登 录</button>
+            </form>
+            <div class="connect">
+                <p>
+                    <a class="mod_pwd" href="">忘记密码？ &nbsp;</a> |
+                    <a class="mod_pwd" href="">&nbsp; 找回账号</a>
+                </p>
+            </div>
+        </div>
+        <div class="page-container1" id="page-container1" style="display: none">
+            <form action="login1()" onsubmit="return check_reg()" method="post" class="form1">
+                <input type="text" id="reg_email" name="reg_email" class="email" placeholder="邮箱">
+                <p class="error" id="reg_err"></p>
+                <input type="password" id="reg_password1" name="reg_password1" class="password" placeholder="密码">
+                <input type="password" id="reg_password2" name="reg_password2" class="password" placeholder="确认密码">
+                <p class="error" id="reg_err1"></p>
+                <button type="submit" id="btn_reg" class="btn_login">注册</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
