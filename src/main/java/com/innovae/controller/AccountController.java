@@ -10,6 +10,12 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.Response;
 
 /**
  * Created by Polotin on 2017/5/19.
@@ -30,12 +36,28 @@ public class AccountController{
 
     //  鐧诲綍
     @ResponseBody
-    @RequestMapping(value = "/login1", method = {RequestMethod.GET, RequestMethod.POST})
-    public UserDomain login(User user) throws Exception{
-        Gson gson = new Gson();
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
+    public boolean login(User user, HttpServletRequest request, HttpServletResponse response) throws Exception{
+//        Gson gson = new Gson();
 //        String result = gson.toJson(accountService.UserLogin(user));
-//        return result;
-        return accountService.UserLogin(user);
+//        System.out.println(result);
+//        System.out.println(user.getId());
+//        System.out.println(user.getPassword());
+        UserDomain userDomain = accountService.UserLogin(user);
+        if(userDomain.getResult() == 0){
+            request.getSession().setAttribute("id", user.getId());
+            request.getSession().setAttribute("name", userDomain.getUserName());
+            request.getSession().setAttribute("password", user.getPassword());
+            response.sendRedirect("/forum");
+            return false;
+        } else {
+            Cookie cookie = new Cookie("err","error");
+            cookie.setMaxAge(10);
+            cookie.setPath("/");
+            response.addCookie(cookie);
+            response.sendRedirect("/login");
+            return true;
+        }
     }
 
 //    @ResponseBody

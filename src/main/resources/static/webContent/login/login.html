@@ -44,10 +44,10 @@
 
     <div class="m-region">
         <div class="page-container" id="page-container" name="login_form">
-            <form action="#" onsubmit="login1()">
-                <input type="text" id="login_email" name="login_email" class="email" placeholder="邮箱">
+            <form method="post" action="account/login" onsubmit="return check_login()">
+                <input type="text" id="login_email" name="id" class="email" placeholder="邮箱">
                 <p class="error" id="login_err"></p>
-                <input type="password" id="login_pwd" name="login_pwd" class="password" placeholder="密码">
+                <input type="password" id="login_pwd" name="password" class="password" placeholder="密码">
                 <p class="error" id="login_err1"></p>
                 <button type="submit" class="btn_login" >登 录</button>
             </form>
