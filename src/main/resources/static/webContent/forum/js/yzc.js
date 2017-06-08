@@ -1,6 +1,7 @@
 /**
  * Created by yzc on 2017/5/19.
  */
+
 function test1(event) {
     var dropText = document.getElementById("type").innerHTML;
     var topicType = "";

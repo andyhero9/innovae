@@ -11,9 +11,9 @@ import java.util.List;
  */
 @Repository
 public interface AccountRepository extends JpaRepository<User,String> {
-        //    @Select("select user from user where id=?1 and password=?2")
-//    @Select("select user from user where id=#{id} and password=#{password}")
-//    List<User> validAccountWhenLoggin(@Param("id") String id, @Param("password") String password);
-    @Query("select u from User u where id=?1 and password=?2")
-    List<User> validAccountWhenLoggin(String id, String password);
+//    @Query("select u from User u where id=?1 and password=?2")
+//    List<User> validAccountWhenLogin(String id, String password);
+
+//    @Query("insert into User(id,name,password) values (?1,?2,?3)")
+//    List<User> register(String id, String name, String password);
 }

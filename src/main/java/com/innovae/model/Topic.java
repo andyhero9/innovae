@@ -1,8 +1,11 @@
 package com.innovae.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class Topic {
+    @Id @Column(nullable = false)
     private Integer id;
 
     private String userId;

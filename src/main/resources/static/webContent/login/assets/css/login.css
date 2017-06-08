@@ -98,7 +98,7 @@ form{
     position: relative;
     width: 305px;
     margin: 0 auto 0 auto;
-    padding-top: 30px;
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -123,6 +123,18 @@ input{
     width: 275px;
     height: 40px;
     margin-top: 20px;
+    font-size: 17px;
+    background: #82BB25;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn_reg{
+    width: 275px;
+    height: 40px;
+    margin-top: 10px;
     font-size: 17px;
     background: #82BB25;
     border: none;
