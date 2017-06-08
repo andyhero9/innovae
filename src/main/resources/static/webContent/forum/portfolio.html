@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="webContent/forum/img/favicon.png">
+
+    <title>INNOVAE | BBS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="webContent/forum/css/bootstrap.min.css" rel="stylesheet">
+    <link href="webContent/forum/css/theme.css" rel="stylesheet">
+    <link href="webContent/forum/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="webContent/forum/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="webContent/forum/assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+
+    <link href="webContent/forum/css/superfish.css" rel="stylesheet">
+    <link href="webContent/forum/css/superfish-vertical.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="webContent/forum/css/Animate.css">
+
+    <!-- Custom styles for this template -->
+    <link href="webContent/forum/css/style.css" rel="stylesheet">
+    <link href="webContent/forum/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      @font-face {font-family: 'Sensei'; src: url('webContent/forum/fonts/Sensei-Medium.ttf'),url('webContent/forum/fonts/Sensei-Medium.otf');}
+      @font-face {font-family: 'Jinglei'; src: url('webContent/forum/fonts/jinglei.ttf');}
+      @font-face {font-family: 'xiawucha'; src: url('webContent/forum/fonts/xiawucha.ttf');}
+      @font-face {font-family: 'fengya'; src: url('webContent/forum/fonts/FZFengYKSJ_Cu.TTF');}
+    </style>
+  </head>
+
+  <body onload="Onload()">
+     <!--header start-->
+    <header class="header-frontend">
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header" style="font-family: 'Sensei';">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">IN<span>NOVAE</span></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">主页</a></li>
+                        <li class="active"><a href="portfolio.html">论坛专区</a></li>
+                        <li><a href="about.html">项目申报</a></li>
+<!--                         <li><a href="services.html">Service</a></li>
+                        <li class="dropdown ">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Feature <b class=" icon-angle-down"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="button.html">Buttons</a></li>
+                            </ul>
+                        </li>
+ -->
+                        <li><a href="price.html">个人中心</a></li>
+                        <li><a href="blog.html">登录</a></li>
+                        <li><a href="contact.html">注册</a></li>
+                        <li><input type="text" placeholder=" Search" class="form-control search"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--header end-->
+
+     <!--breadcrumbs start-->
+     <div class="breadcrumbs">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-4 col-sm-4">
+                     <h1>论坛专区</h1>
+                 </div>
+                 <div class="col-lg-8 col-sm-8">
+                     <ol class="breadcrumb pull-right">
+                         <li><a href="#">招人帖</a></li>
+                         <li><a href="#">求助帖</a></li>
+                         <li class="active" style="font-family: 'fengya';">水帖</li>
+                     </ol>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!--breadcrumbs end-->
+
+    <!--container start-->
+    <div class="container">
+        <!--portfolio start-->
+        <div class="gallery-container">
+            <ul id="filters" class="list-unstyled">
+                <li><a href="#" data-filter="*"> 按热度排序</a></li>
+                <li>
+                  <div class="btn-group">
+                    <button type="button" class="btn fonts dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      筛选标签1 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">软件学院</a></li>
+                      <li><a href="#">电信学院</a></li>
+                      <li><a href="#">土木学院</a></li>
+                      <li><a href="#">经管学院</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn-group">
+                    <button type="button" class="btn fonts dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                      筛选标签2 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Java</a></li>
+                      <li><a href="#">C++</a></li>
+                      <li><a href="#">Python</a></li>
+                      <li><a href="#">Node.js</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn-group">
+                    <button type="button" class="btn fonts dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      筛选标签3 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">大一</a></li>
+                      <li><a href="#">大二</a></li>
+                      <li><a href="#">大三</a></li>
+                      <li><a href="#">大四</a></li>
+                    </ul>
+                  </div>
+                </li>    
+
+                <li>
+                  <div class="btn-group">
+                    <button type="button" class="btn fonts dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      筛选标签4 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Java</a></li>
+                      <li><a href="#">C++</a></li>
+                      <li><a href="#">Python</a></li>
+                      <li><a href="#">Node.js</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn-group">
+                    <button type="button" class="btn fonts dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      筛选标签5 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">大一</a></li>
+                      <li><a href="#">大二</a></li>
+                      <li><a href="#">大三</a></li>
+                      <li><a href="#">大四</a></li>
+                    </ul>
+                  </div>
+                </li> 
+
+                <li style="margin-right: 0px; margin-left: 250px;">
+
+                  <div class="fatie" title="发帖">
+                      <a href="publish.html"><img src="webContent/forum/img/post.png" style="width: 100%;height: 100%" onclick="#"></a>
+                  </div>
+                </li>                                             
+            </ul>
+
+            <!-- 论坛列表 -->
+            <div style="border: solid 2px #f77b6f; border-radius: 5px; width: 100%;">
+             <!-- 表头 -->  
+              <table class="liebiao">  
+                <thead>  
+                   <tr>  
+                    <th>标题</th>  
+                    <th>作者</th>  
+                    <th>评论数</th>  
+                    <th>最后更新时间</th>  
+                   </tr>  
+                </thead>  
+                <!-- 表格底部 -->  
+<!--               <tfoot>  
+                <tr>  
+                  <td> </td>  
+                  <td></td>  
+                  <td></td>  
+                  <td></td>  
+                </tr>  
+              </tfoot>   -->
+              
+              <tr>  
+                <td><SPAN title="闾光泽的体重？" class=smallfont><STRONG><a href="#">闾光泽的体重？</a></STRONG></SPAN></td>  
+                <td>闾光泽本人</td>  
+                <td>999999</td>  
+                <td>2017/5/12</td>  
+              </tr>     
+  
+              <tr>  
+                <td><SPAN title="任兴银的身高？"   
+            class=smallfont><STRONG><a href="#">任兴银的身高？</a></STRONG></SPAN></td>  
+                <td>任兴银本人</td>  
+                <td>999999</td>  
+                <td>2017/5/12</td>  
+              </tr>     
+  
+              <tr>  
+                <td><SPAN title="张志强的体重？？？"   
+            class=smallfont><STRONG><a href="#">张志强的体重？？？</a></STRONG></SPAN></td>  
+                <td>张志强本人</td>  
+                <td>100000000</td>  
+                <td>2017/5/12</td>  
+              </tr> 
+
+              <tr>  
+              <td><SPAN title="王瑷的头发长度？"   
+                  class=smallfont><STRONG><a href="#">王瑷的头发长度？</a></STRONG></SPAN></td>  
+                  <td>王瑷本人</td>  
+                  <td>666666</td>  
+                  <td>2017/5/12</td>  
+                </tr>     
+  
+              <tr>  
+                <td><SPAN title="预测帖：方君怡明天早上几点起？"   
+            class=smallfont><STRONG><a href="#">预测帖：方君怡明天早上几点起？</a></STRONG></SPAN></td>  
+                <td>方君怡</td>  
+                <td>0</td>  
+                <td>2017/5/12</td>  
+              </tr>     
+  
+              <tr>  
+                <td><SPAN title="杨志超-侯立-海日汗-赵姓学长谁的名字笔画最多"   
+            class=smallfont><STRONG><a href="#">杨志超-侯立-海日汗-赵姓学长谁的名字笔画最多</a></STRONG></SPAN></td>  
+                <td>xxxxx</td>  
+                <td>666666</td>  
+                <td>2017/5/12</td>  
+              </tr>
+
+              <tr>
+                  <td><SPAN title="杨志超-侯立-海日汗-赵姓学长谁的名字笔画最多"
+                            class=smallfont><STRONG><a href="#">杨志超-侯立-海日汗-赵姓学长谁的名字笔画最多</a></STRONG></SPAN></td>
+                  <td>xxxxx</td>
+                  <td>666666</td>
+                  <td>2017/5/12</td>
+              </tr>
+
+
+              </table>
+              
+ 
+            </div>
+
+
+        </div>
+        <!--portfolio end-->
+    </div>
+    <!--container end-->
+
+    <!--footer start-->
+    <footer class="footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-3 col-sm-3">
+                     <h1>更多信息</h1>
+                     <address>
+                         <p>地址: 上海市 嘉定区 曹安公路4800号 同济大学</p>
+                         <p>这是--一个--很有意思的--网站</p>
+
+                         <p>联系电话：(123) 456-7890</p>
+                         <p>传真： (123) 456-7890</p>
+                         <p>电子邮箱：<a href="javascript:;">support@vectorlab.com</a></p>
+                     </address>
+                 </div>
+                 <div class="col-lg-5 col-sm-5">
+                     <h1>最新资讯</h1>
+                     这个网站 距离完成开发还有 <a href="http://www.cssmoban.com/" target="_blank" title="你没看错">一个多月</a> 惊不惊喜 意不意外
+                 </div>
+                 <div class="col-lg-3 col-sm-3 col-lg-offset-1">
+                     <h1>stay connected</h1>
+                     <ul class="social-link-footer list-unstyled">
+                         <li><a href="#"><i class="icon-facebook"></i></a></li>
+                         <li><a href="#"><i class="icon-google-plus"></i></a></li>
+                         <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                         <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                         <li><a href="#"><i class="icon-twitter"></i></a></li>
+                         <li><a href="#"><i class="icon-skype"></i></a></li>
+                         <li><a href="#"><i class="icon-github"></i></a></li>
+                         <li><a href="#"><i class="icon-youtube"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </footer>
+    <!--footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/hover-dropdown.js"></script>
+
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="webContent/forum/assets/bxslider/jquery.bxslider.js"></script>
+
+
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.isotope.js"></script>
+
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/link-hover.js"></script>
+
+    <script src="webContent/forum/assets/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+     <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+    <script src="webContent/forum/js/forum_home.js"></script>
+
+
+
+  </body>
+</html>

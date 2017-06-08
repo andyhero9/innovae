@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>INNOVEA | BBS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+
+    <link href="css/superfish.css" rel="stylesheet">
+    <link href="css/superfish-vertical.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/Animate.css">
+    <link href="css/yzc.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        @font-face {font-family: 'Sensei'; src: url('fonts/Sensei-Medium.ttf'),url('fonts/Sensei-Medium.otf');}
+        @font-face {font-family: 'Jinglei'; src: url('fonts/jinglei.ttf');}
+        @font-face {font-family: 'xiawucha'; src: url('fonts/xiawucha.ttf');}
+        @font-face {font-family: 'fengya'; src: url('fonts/FZFengYKSJ_Cu.TTF');}
+    </style>
+</head>
+
+<body>
+<!--header start-->
+<header class="header-frontend">
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header" style="font-family: 'Sensei';">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">IN<span>NOVAE</span></a>
+            </div>
+            <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="portfolio.html">论坛专区</a></li>
+                    <li><a href="about.html">项目申报</a></li>
+                    <!--                         <li><a href="services.html">Service</a></li>
+                                            <li class="dropdown ">
+                                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Feature <b class=" icon-angle-down"></b></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="typography.html">Typography</a></li>
+                                                    <li><a href="button.html">Buttons</a></li>
+                                                </ul>
+                                            </li>
+                     -->
+                    <li><a href="price.html">个人中心</a></li>
+                    <li><a href="blog.html">登录</a></li>
+                    <li><a href="contact.html">注册</a></li>
+                    <li><input type="text" placeholder=" Search" class="form-control search"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!--header end-->
+
+<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>发布帖子</h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li><a href="portfolio.html">返回论坛</a></li>
+                    <li class="active" style="font-family: 'fengya';">发布帖子</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+
+<!--container start-->
+<div class="container">
+    <!--publish start-->
+    <div class="gallery-container" style="font-family: 'xiawucha';">
+        <div class="module-body discuss-publish">
+            <div class="topic-selected-box clearfix" id="dropdown1">
+                <div class="btn1-group" id="jsTopicSelectedBox">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+                            data-toggle="dropdown">
+                        <span class="placeholder" id="type">类型</span>
+                        <span class="caret1"></span>
+                    </button>
+                    <ul id ="type2" value="-1" class="dropdown-menu" role="menu" aria-labelledby="dropdownmenu1">
+                        <li role="presentation" value="1"><a role="menuitem" tabindex="1" href="#;">招人</a></li>
+                        <li role="presentation" value="2"><a role="menuitem" tabindex="2" href="#;">求组</a></li>
+                        <li role="presentation" value="3"><a role="menuitem" tabindex="3" href="#;">水贴</a></li>
+                    </ul>
+                </div>
+                <div class="control-group inline-block" id="jsTopTitle">
+                    <input id = "title" class="form-control" placeholder="标题："
+                           value=""
+                           type="text"
+                           style="width:100%;height:50px;border:2px solid #777;font-size:18px;font-weight:bold;border-radius:4px"/>
+                    <div class="error-tip">请选择帖子类型后发布，如发布内容与类型无关，帖子将被删除。</div>
+                </div>
+            </div>
+            <div class="discuss-tags">
+                <span class="discuss-label">技术方向：</span>
+                <div class="tags-box" id = "box">
+                    <a href="#;" class="tag-label" data-id="1" onclick="test(this)" id = "1">Java</a>
+                    <a href="#;" class="tag-label" data-id="2" onclick="test(this)" id = "2">C++</a>
+                    <a href="#;" class="tag-label" data-id="3" onclick="test(this)" id = "3">C#</a>
+                    <a href="#;" class="tag-label" data-id="4" onclick="test(this)" id = "4">安卓</a>
+                    <a href="#;" class="tag-label" data-id="5" onclick="test(this)" id = "5">iOS</a>
+                    <a href="#;" class="tag-label" data-id="6" onclick="test(this)" id = "6">前端</a>
+                    <a href="#;" class="tag-label" data-id="7" onclick="test(this)" id = "7">算法</a>
+                    <a href="#;" class="tag-label" data-id="8" onclick="test(this)" id = "8">测试</a>
+                    <a href="#;" class="tag-label" data-id="9" onclick="test(this)" id = "9">PHP</a>
+                    <a href="#;" class="tag-label" data-id="10" onclick="test(this)" id = "10">安全</a>
+                    <a href="#;" class="tag-label" data-id="11" onclick="test(this)" id = "11">数据库</a>
+                    <a href="#;" class="tag-label" data-id="12" onclick="test(this)" id = "12">数据挖掘</a>
+                    <a href="#;" class="tag-label" data-id="13" onclick="test(this)" id = "13">机器学习</a>
+                    <a href="#;" class="tag-label" data-id="14" onclick="test(this)" id = "14">人工智能</a>
+                    <a href="#;" class="tag-label" data-id="15" onclick="test(this)" id = "15">node.js</a>
+                    <a href="#;" class="tag-label" data-id="16" onclick="test(this)" id = "16">.net</a>
+                    <a href="#;" class="tag-label" data-id="17" onclick="test(this)" id = "17">脚本</a>
+                    <a href="#;" class="tag-label" data-id="18" onclick="test(this)" id = "18">其他</a>
+                </div>
+            </div>
+            <div class="js-editor">
+                <form>
+                    <textarea name="content" style="width:95%;height:360px;visibility:hidden;" placeholder="">请输入帖子内容..</textarea>
+                </form>
+            </div>
+            <div class="txtarea-foot clearfix">
+                <a href="#;"
+                   id="jsPublish"
+                   class="btn1 float-right btn1-primary btn1-modify-sure nc-req-auth click-pub-point" onclick="test1()">发布</a>
+                <a href="portfolio.html" id="jsCancel" class="btn1 btn1-default float-right btn1-modify-cancel">取消</a>
+            </div>
+        </div>
+    </div>
+    <!--publish end-->
+</div>
+<!--container end-->
+
+<!--footer start-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-3">
+                <h1>更多信息</h1>
+                <address>
+                    <p>地址: 上海市 嘉定区 曹安公路4800号 同济大学</p>
+                    <p>这是--一个--很有意思的--网站</p>
+
+                    <p>联系电话：(123) 456-7890</p>
+                    <p>传真： (123) 456-7890</p>
+                    <p>电子邮箱：<a href="javascript:;">support@vectorlab.com</a></p>
+                </address>
+            </div>
+            <div class="col-lg-5 col-sm-5">
+                <h1>最新资讯</h1>
+                这个网站 距离完成开发还有 <a href="http://www.cssmoban.com/" target="_blank" title="你没看错">一个多月</a> 惊不惊喜 意不意外
+            </div>
+            <div class="col-lg-3 col-sm-3 col-lg-offset-1">
+                <h1>stay connected</h1>
+                <ul class="social-link-footer list-unstyled">
+                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon-google-plus"></i></a></li>
+                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-skype"></i></a></li>
+                    <li><a href="#"><i class="icon-github"></i></a></li>
+                    <li><a href="#"><i class="icon-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/hover-dropdown.js"></script>
+
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="assets/bxslider/jquery.bxslider.js"></script>
+
+
+<script src="js/superfish.js"></script>
+<script src="js/jquery.isotope.js"></script>
+
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/link-hover.js"></script>
+
+<script src="assets/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+<!--common script for all pages-->
+<script src="js/common-scripts.js"></script>
+
+<script src = "js/yzc.js"></script>
+<style>
+    form {
+        margin: 0;
+    }
+    textarea {
+        display: block;
+    }
+</style>
+<link rel="stylesheet" href="kindeditor/themes/simple/simple.css" />
+<script charset="utf-8" src="kindeditor/kindeditor-all.js"></script>
+<script charset="utf-8" src="kindeditor/lang/zh-CN.js"></script>
+<script>
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="content"]', {
+            <!--
+            resizeType : 1,
+            allowPreviewEmoticons : false,
+            allowImageUpload : false,
+            items : [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+            -->
+        });
+    });
+</script>
+
+<style>
+    .tag-label-select, .tag-label-select:hover, .tag-label-select:focus {
+        border-color: #f77b6f;
+        background: #f77b6f;
+        color: #FFF;
+        border-radius: 12px;
+        border: 1px solid #f77b6f;
+        display: inline-block;
+        padding: 4px 16px;
+        font-size: 15px;
+        margin-right: 2px;
+        margin-bottom: 5px;
+        line-height: 16px;
+        position: relative
+    }
+</style>
+
+</body>
+</html>

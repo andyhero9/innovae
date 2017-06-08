@@ -48,6 +48,7 @@ jQuery(function($){
 });
 
 function Onload() {
+    console.log(getCookie("err"));
     if(getCookie("err") != null && getCookie("err") != ""){
         document.getElementById("login_err1").innerText = "账号或密码错误";
         document.cookie="err="+"";
@@ -57,7 +58,6 @@ function Onload() {
         document.cookie="reg_err="+"";
         $('#register_area').click();
     }
-
 }
 
 function choose_reg(){
@@ -115,7 +115,32 @@ function check_login() {
         err.innerText="请输入密码";
         return false;
     }
-    return true;
+    // else{
+    //     var params={};
+    //     params.id=$("#login_email").val();
+    //     params.password=$("#login_pwd").val();
+    //     $.ajax(
+    //         {
+    //             type:"post",
+    //             url:"account/login",
+    //             data:params,
+    //             datatype:"json",
+    //             success:function (data) {
+    //                 var obj = JSON.parse(data);
+    //                 if(obj.result == 0){
+    //                     return true;
+    //                 }else if(obj.result == 1){
+    //                     var err = document.getElementById("login_err1");
+    //                     err.innerText="账号或密码错误";
+    //                     return false;
+    //                 }
+    //             },
+    //             error:function () {
+    //                 return false;
+    //             }
+    //         }
+    //     )
+        return true;
 }
 
 function validateEmail(email) {
@@ -162,8 +187,8 @@ function check_reg() {
 
 function login1(){
     var params={};
-    params.id="1452761@tongji.edu.cn";
-    params.password="982164";
+    params.id=$("#login_email").val();
+    params.password=$("#login_pwd").val();
     $.ajax(
         {
             type:"post",
@@ -171,7 +196,17 @@ function login1(){
             data:params,
             datatype:"json",
             success:function (data) {
-                alert(data.name);
+                var obj = JSON.parse(data);
+                // alert(obj.result);
+                if(obj.result == 0){
+                    alert("login success");
+                    return true;
+                }else if(obj.result == 1){
+                    alert("fail");
+                    return false;
+                }
+            },
+            error:function () {
                 return false;
             }
         }

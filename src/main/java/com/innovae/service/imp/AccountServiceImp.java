@@ -18,16 +18,9 @@ public class AccountServiceImp implements AccountService {
     private AccountRepository accountRepository;
     @Override
     public String loginWithPwd(User user){
-        String userName = "";
         try{
-            List<User> users= accountRepository.validAccountWhenLoggin(user.getId(), user.getPassword());
-            if(users.size() == 0){
-                return userName;
-            }else {
-                //Login success
-                userName = users.get(0).getName();
-                return userName;
-            }
+            User user1 = accountRepository.findOne(user.getId());
+            return user1.getName();
         }catch (Exception e){
             throw e;
         }
@@ -38,9 +31,33 @@ public class AccountServiceImp implements AccountService {
         String userName = loginWithPwd(user);
         //login success
         if(userName != null && userName != ""){
-            userDomain = new UserDomain(0, user.getId(), userName);
-        }else {
             userDomain = new UserDomain(1, user.getId(), userName);
+        }else {
+            userDomain = new UserDomain(0, user.getId(), userName);
+        }
+        return userDomain;
+    }
+
+    @Override
+    public String register(User user){
+        try{
+            accountRepository.save(user);
+            User user1 = accountRepository.findOne(user.getId());
+            return user1.getName();
+        }catch (Exception e){
+            throw e;
+        }
+    }
+
+    @Override
+    public UserDomain UserRegister(User user) throws Exception{
+        UserDomain userDomain;
+        String userName = register(user);
+        //reg success
+        if(userName != null && userName != ""){
+            userDomain = new UserDomain(1, user.getId(), userName);
+        }else {
+            userDomain = new UserDomain(0, user.getId(), userName);
         }
         return userDomain;
     }

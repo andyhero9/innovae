@@ -10,6 +10,12 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.Response;
 
 /**
  * Created by Polotin on 2017/5/19.
@@ -23,25 +29,44 @@ public class AccountController{
     @Autowired
     AccountService accountService;
 
-    /*@RequestMapping("/")
-    public ModelAndView index() {
-        return new ModelAndView("../login.html");
-    }*/
-
-    //  鐧诲綍
     @ResponseBody
-    @RequestMapping(value = "/login1", method = {RequestMethod.GET, RequestMethod.POST})
-    public UserDomain login(User user) throws Exception{
-        Gson gson = new Gson();
-//        String result = gson.toJson(accountService.UserLogin(user));
-//        return result;
-        return accountService.UserLogin(user);
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
+    public boolean login(User user, HttpServletRequest request, HttpServletResponse response) throws Exception{
+        UserDomain userDomain = accountService.UserLogin(user);
+        if(userDomain.getResult() == 1){
+            request.getSession().setAttribute("id", userDomain.getId());
+            request.getSession().setAttribute("name", userDomain.getUserName());
+            request.getSession().setAttribute("password", user.getPassword());
+            response.sendRedirect("/forum");
+            return true;
+        } else {
+            Cookie cookie = new Cookie("err","error");
+            cookie.setMaxAge(10);
+            cookie.setPath("/");
+            response.addCookie(cookie);
+            response.sendRedirect("/login");
+            return false;
+        }
     }
 
-//    @ResponseBody
-//    @RequestMapping(value = "/login1", method = {RequestMethod.GET, RequestMethod.POST})
-//    public String login() throws Exception{
-////        return new ModelAndView("login/test.html");
-//        return "axs";
-//    }
+
+    @ResponseBody
+    @RequestMapping(value = "/register", method = {RequestMethod.GET, RequestMethod.POST})
+    public boolean register(User user, HttpServletRequest request, HttpServletResponse response) throws Exception{
+        UserDomain userDomain = accountService.UserRegister(user);
+        if(userDomain.getResult() == 1){
+            request.getSession().setAttribute("id", userDomain.getId());
+            request.getSession().setAttribute("name", userDomain.getUserName());
+            request.getSession().setAttribute("password", user.getPassword());
+            response.sendRedirect("/forum");
+            return true;
+        } else {
+            Cookie cookie = new Cookie("reg_err","error");
+            cookie.setMaxAge(10);
+            cookie.setPath("/");
+            response.addCookie(cookie);
+            response.sendRedirect("/login");
+            return false;
+        }
+    }
 }

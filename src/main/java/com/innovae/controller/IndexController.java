@@ -13,8 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class IndexController {
     @RequestMapping(value = "/login")
-    ModelAndView index()
+    ModelAndView login()
     {
         return new ModelAndView("webContent/login/login.html");
+    }
+
+    @RequestMapping(value = "/forum")
+    ModelAndView forum(){
+        return new ModelAndView("webContent/forum/portfolio.html");
     }
 }

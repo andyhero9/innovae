@@ -4,7 +4,7 @@ package com.innovae.domain;
  * Created by Polotin on 2017/5/19.
  */
 public class UserDomain {
-    private int result = 0;
+    private int result = 0;  //result = 1 登录成功
     private String id;
     private String userName;
 
