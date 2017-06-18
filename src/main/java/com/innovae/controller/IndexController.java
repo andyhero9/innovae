@@ -22,4 +22,10 @@ public class IndexController {
     ModelAndView forum(){
         return new ModelAndView("webContent/forum/portfolio.html");
     }
+
+
+    @RequestMapping(value = "/topic")
+    ModelAndView topic(){
+        return new ModelAndView("webContent/topic/index.html");
+    }
 }

@@ -1,148 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Mosaddek">
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
-
     <title>INNOVEA | BBS</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/theme.css" rel="stylesheet">
     <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
-
-    <link href="css/superfish.css" rel="stylesheet">
-    <link href="css/superfish-vertical.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/Animate.css">
-
-    <!-- Custom styles for this template -->
+    <!--<link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />-->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="webContent/topic/css/lgz.css" rel="stylesheet">
 
-      <!-- Lgz -->
-      <link href="css/lgz.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-      @font-face {font-family: 'Sensei'; src: url('fonts/Sensei-Medium.ttf'),url('fonts/Sensei-Medium.otf');}
-      @font-face {font-family: 'Jinglei'; src: url('fonts/jinglei.ttf');}
-      @font-face {font-family: 'xiawucha'; src: url('fonts/xiawucha.ttf');}
-      @font-face {font-family: 'fengya'; src: url('fonts/FZFengYKSJ_Cu.TTF');}
+        @font-face {font-family: 'Sensei'; src: url('fonts/Sensei-Medium.ttf'),url('fonts/Sensei-Medium.otf');}
+        @font-face {font-family: 'xiawucha'; src: url('fonts/xiawucha.ttf');}
     </style>
-  </head>
+</head>
 
-  <body>
-    <!--header start-->
-		<script type="text/javascript" src="head.js"></script>
-	<!--header end-->
+<body>
+<!--header start-->
+<script type="text/javascript" src="js/head.js"></script>
+<!--header end-->
 
-     <!--breadcrumbs start-->
-     <div class="breadcrumbs">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-4 col-sm-4">
-                     <h1 id="c-title">标题</h1>
-                 </div>
-                 <div class="col-lg-8 col-sm-8">
-                     <ol class="breadcrumb pull-right">
-                         <li><a id="c-username">作者昵称</a></li>
-                         <li><a id="c-time">发表时间</a></li>
-                     </ol>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!--breadcrumbs end-->
-
-    <!--container start-->
+<!--breadcrumbs start-->
+<div class="breadcrumbs">
     <div class="container">
-        <div class="gallery-container">
-            <!--帖子内容-->
-            <div style="height: 60px; width: 100%;margin-bottom: 30px;border-bottom: solid 1px #9eb3c4;" id="typeBox">
-                <span class="content-label">标签：</span>
-                <!--<label class="content-type">aa</label>-->
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1 id="c-title">标题</h1>
             </div>
-
-            <div class="tieziDiv tiezi-Content" id="c-content">
-                <!--<textarea class="form-control" style="height: 100%"></textarea>-->
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="gallery-container">
-            <!--帖子评论-->
-            <div style="height: 100%;margin-bottom: 50px;" class="tieziDiv" id="commentBox">
-                <h2 class="content-label1">评论:</h2>
-                <!--<div class="comment-box">
-                    <input type="image" src="img/avatar2.jpg" class="head-img">
-                    <div class="comment-div">
-                        直线折旧法假定资产的价值下降速度常数对其有用的生活,
-                        这不是与贬值情况的软件组成。软件折旧主要在于功能的一部分,
-                        其折旧率可能随技术的发展,显示出变化的趋势缓慢之后第一次和快速。
-                    </div>
-                </div>-->
-            </div>
-
-            <div style="float: right;margin-bottom: 80px">
+            <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
-                    <li><a onclick="more()">more+</a></li>
+                    <li><a id="c-username">作者昵称</a></li>
+                    <li><a id="c-time">发表时间</a></li>
                 </ol>
             </div>
-
-            <form style="height: 100px" class="tieziDiv" >
-                <h2 class="content-label" style="float: left">发表评论:</h2>
-
-                <textarea class="form-control tiezi-textarea"></textarea>
-
-                <input type="submit" class="btn btn-danger" style="float: right">
-            </form>
-
         </div>
     </div>
-    <!--container end-->
+</div>
+<!--breadcrumbs end-->
 
-    <!--footer start-->
-		<script type="text/javascript" src="footer.js"></script>
-    <!--footer end-->
+<!--container start-->
+<div class="container">
+    <div class="gallery-container">
+        <!--帖子内容-->
+        <div style="height: 60px; width: 100%;margin-bottom: 30px;border-bottom: solid 1px #9eb3c4;" id="typeBox">
+            <span class="content-label">标签：</span>
+            <!--<label class="content-type">aa</label>-->
+        </div>
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/hover-dropdown.js"></script>
+        <div class="tieziDiv tiezi-Content" id="c-content">
+            <!--<textarea class="form-control" style="height: 100%"></textarea>-->
+        </div>
+    </div>
+</div>
 
-    <script defer src="js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="assets/bxslider/jquery.bxslider.js"></script>
+<div class="container">
+    <div class="gallery-container">
+        <!--帖子评论-->
+        <div style="height: 100%;margin-bottom: 50px;" class="tieziDiv" id="commentBox">
+            <h2 class="content-label1">评论:</h2>
+        </div>
+
+        <div style="float: right;margin-bottom: 80px">
+            <ol class="breadcrumb pull-right">
+                <li><a onclick="more()">more+</a></li>
+            </ol>
+        </div>
+
+        <form style="height: 100px" class="tieziDiv" >
+            <h2 class="content-label" style="float: left">发表评论:</h2>
+
+            <textarea class="tiezi-textarea"></textarea>
+
+            <input type="submit" class="btn btn-danger" style="float: right">
+        </form>
+
+    </div>
+</div>
+<!--container end-->
+
+<!--footer start-->
+<script type="text/javascript" src="js/footer.js"></script>
+<!--footer end-->
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/hover-dropdown.js"></script>
+
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="assets/bxslider/jquery.bxslider.js"></script>
 
 
-    <script src="js/superfish.js"></script>
-    <script src="js/jquery.isotope.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.isotope.js"></script>
 
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/link-hover.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/link-hover.js"></script>
 
-    <script src="assets/fancybox/source/jquery.fancybox.pack.js"></script>
-
-
-     <!--common script for all pages-->
-    <script src="js/common-scripts.js"></script>
-
-    <!--lgz-->
-    <script src="js/lgz.js"></script>
+<script src="assets/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
+<!--common script for all pages-->
+<script src="js/common-scripts.js"></script>
 
-  </body>
+<!--lgz-->
+<script src="webContent/topic/js/lgz.js"></script>
+</body>
 </html>
