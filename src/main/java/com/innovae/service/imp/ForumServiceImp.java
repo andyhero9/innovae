@@ -35,7 +35,7 @@ public class ForumServiceImp implements ForumService{
         return result;
     }
     @Override
-    public boolean addTopic(Topic topic)
+    public String addTopic(Topic topic)
     {
         try {
             forumRepository.save(topic);
@@ -44,13 +44,19 @@ public class ForumServiceImp implements ForumService{
         {
             e.printStackTrace();
         }
-        return (forumRepository.findById(topic.getId())!=null);
+        String a = "\"result\":";
+        String result = "";
+        if (forumRepository.findById(topic.getId())!=null)
+            result = "true";
+        else
+            result="false";
+        return "{"+a+result+"}";
     }
     @Autowired
     private CommentRepository commentRepository;
 
     @Override
-    public boolean addComment(Comment comment) throws Exception
+    public String addComment(Comment comment) throws Exception
     {
         try {
             commentRepository.save(comment);
@@ -59,7 +65,13 @@ public class ForumServiceImp implements ForumService{
         {
             e.printStackTrace();
         }
-        return (commentRepository.findById(comment.getId())!=null);
+        String a = "\"result\":";
+        String result = "";
+        if (commentRepository.findById(comment.getId())!=null)
+            result = "true";
+        else
+            result="false";
+        return "{"+a+result+"}";
     }
 
     @Override
@@ -70,6 +82,13 @@ public class ForumServiceImp implements ForumService{
         if (comments.size() != 0)
             result = new Gson().toJson(comments);
         return result;
+    }
+
+    public static void main(String[] args)
+    {
+        String a = "\"result\":";
+        String result = "{"+a+"true"+"}";
+        System.out.print(result);
     }
 
 }

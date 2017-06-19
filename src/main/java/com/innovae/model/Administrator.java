@@ -11,12 +11,18 @@ public class Administrator {
 
     private Integer type;
 
-    public Administrator(String id, String password, String college, String name, Integer type) {
+    private String email;
+
+    private String emailPassword;
+
+    public Administrator(String id, String password, String college, String name, Integer type, String email, String emailPassword) {
         this.id = id;
         this.password = password;
         this.college = college;
         this.name = name;
         this.type = type;
+        this.email = email;
+        this.emailPassword = emailPassword;
     }
 
     public Administrator() {
@@ -61,5 +67,21 @@ public class Administrator {
 
     public void setType(Integer type) {
         this.type = type;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
+    public String getEmailPassword() {
+        return emailPassword;
+    }
+
+    public void setEmailPassword(String emailPassword) {
+        this.emailPassword = emailPassword == null ? null : emailPassword.trim();
     }
 }

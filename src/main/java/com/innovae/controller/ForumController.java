@@ -38,7 +38,7 @@ public class ForumController {
      */
     @ResponseBody
     @RequestMapping(value = "/addTopic",method = {RequestMethod.GET,RequestMethod.POST})
-    public boolean addTopic(Topic topic,HttpServletRequest request,HttpServletResponse response)throws Exception
+    public String addTopic(Topic topic,HttpServletRequest request,HttpServletResponse response)throws Exception
     {
         topic.setUserId(request.getSession().getAttribute("id").toString());
         topic.setUserName(request.getSession().getAttribute("name").toString());
@@ -48,7 +48,7 @@ public class ForumController {
 
     @ResponseBody
     @RequestMapping(value = "/addComment",method = {RequestMethod.GET,RequestMethod.POST})
-    public boolean addComment(Comment comment,HttpServletRequest request,HttpServletResponse response) throws Exception
+    public String addComment(Comment comment,HttpServletRequest request,HttpServletResponse response) throws Exception
     {
         //int TopicId
         int temp = 0;

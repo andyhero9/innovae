@@ -18,6 +18,6 @@ public interface CommentRepository extends JpaRepository<Comment,Integer>{
     @Query("select c from Comment c where c.id = ?1")
     Comment findById(int id);
 
-    @Query(value = "select c from Comment where topicId=?1 order by time asc limit 10*(page-1),10")
+    @Query(value = "select c from Comment where topicId=?1 order by time asc limit 10*(page-1),10",nativeQuery = true)
     List<Comment> getCommentsByTopicId(int topicId,int page);
 }

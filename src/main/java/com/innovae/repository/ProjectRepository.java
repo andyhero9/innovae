@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Repository
 public interface ProjectRepository extends JpaRepository<Project,Integer> {
-    @Query(value = "select * from Project where type = ?1")
+    @Query(value = "select * from Project where type = ?1",nativeQuery = true)
     List<Project> findByTpye(int type);
 
 

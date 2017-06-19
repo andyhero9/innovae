@@ -57,6 +57,6 @@
               <table tableName="news" schema=""></table>
               <table tableName="project" schema=""></table>
               <table> tableName="topic" schema=""></table>-->
-              <table tableName="group" schema=""></table>
+              <table tableName="administrator" schema=""></table>
        </context>
 </generatorConfiguration>
