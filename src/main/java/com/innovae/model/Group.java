@@ -1,6 +1,11 @@
 package com.innovae.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Group {
+    @Id
     private Integer id;
 
     private Integer projectId;
